@@ -5,30 +5,11 @@
     </mat-drawer>
     <mat-drawer-content class="p-6">
         <app-products-header (columnsCountChange)="onColumnsCountChange($event)"></app-products-header>
-        <mat-grid-list
-            gutterSize="16"
-            [cols]="cols"
-            [rowHeight]="rowsHeight"
-        >   
+        <mat-grid-list gutterSize="16" [cols]="cols" [rowHeight]="rowsHeight">
             <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+                <app-product-box (addToCart)="onAddToCart($event)" class="w-full"
+                    [fullWidthMode]="cols === 1"></app-product-box>
             </mat-grid-tile>
-            <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
-            </mat-grid-tile>
-
         </mat-grid-list>
     </mat-drawer-content>
 
