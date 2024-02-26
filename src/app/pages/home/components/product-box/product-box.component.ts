@@ -21,7 +21,7 @@ export class ProductBoxComponent implements OnInit {
 
   };
 
-  @Output() addToCart = new EventEmitter();
+  @Output() addToCart = new EventEmitter<Product>();
 
   constructor() { }
 
